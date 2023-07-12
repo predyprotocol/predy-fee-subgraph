@@ -1,0 +1,26 @@
+# uniswap subgraph
+
+enum Interval {
+  HOURLY
+  DAILY
+}
+
+type AggregatedUniswapPriceEntity @entity {
+  id: ID! # address-interval-open
+  address: Bytes!
+  strategyId: BigInt
+  interval: Interval!
+  openTimestamp: BigInt!
+  closeTimestamp: BigInt!
+  openPrice: BigInt!
+  closePrice: BigInt!
+}
+
+type UniFeeGrowthHourly @entity {
+  id: ID! # address-yyyy-MM-dd
+  address: Bytes!
+  feeGrowthGlobal0X128: BigInt!
+  feeGrowthGlobal1X128: BigInt!
+  createdAt: BigInt!
+  updatedAt: BigInt!
+}
