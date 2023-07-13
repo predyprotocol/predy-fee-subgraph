@@ -2,7 +2,7 @@
   "name": "@predy/fee-subgraph",
   "license": "UNLICENSED",
   "scripts": {
-    "codegen": "graph codegen",
+    "codegen": "bash ./scripts/codegen.sh",
     "test": "graph test",
     "build": "graph build",
     "fmt:fix": "prettier --write src/**/*",
