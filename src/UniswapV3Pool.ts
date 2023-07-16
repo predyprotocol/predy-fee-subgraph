@@ -41,17 +41,19 @@ export function handleSwap(event: Swap): void {
     ) {
       for (let strategyId = 1; strategyId < StrategyStartBlocks.length; strategyId++) {
         if (event.block.number.gt(BigInt.fromU64(StrategyStartBlocks[strategyId]))) {
-          const strategyPrice = GammaShortStrategyContract.getPrice(BigInt.fromU32(strategyId))
+          const strategyPrice = GammaShortStrategyContract.try_getPrice(BigInt.fromU32(strategyId))
 
-          updateAggregatedPrice(
-            intervalName,
-            intervalLength,
-            intervalAdjustment,
-            GammaShortStrategyContract._address,
-            strategyPrice,
-            event.block.timestamp,
-            BigInt.fromU32(strategyId)
-          )
+          if (!strategyPrice.reverted) {
+            updateAggregatedPrice(
+              intervalName,
+              intervalLength,
+              intervalAdjustment,
+              GammaShortStrategyContract._address,
+              strategyPrice.value,
+              event.block.timestamp,
+              BigInt.fromU32(strategyId)
+            )
+          }
         }
       }
     }
