@@ -91,10 +91,6 @@
     },
     {
       "startBlock": 111260000,
-      "last": false
-    },
-    {
-      "startBlock": 111260400,
       "last": true
     }
   ]
