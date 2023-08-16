@@ -1,0 +1,21 @@
+{
+  "network": "base",
+  "GammaShortStrategy": "0x27605a1b1eC1F6a964A926D43770Cb37E1f295F5",
+  "pools": [
+    {
+      "name": "ETH-USDbC-500",
+      "address": "0x4C36388bE6F416A29C8d8Eee81C771cE6bE14B18"
+    }
+  ],
+  "startBlock": 2557380,
+  "strategies": [
+    {
+      "startBlock": 0,
+      "last": false
+    },
+    {
+      "startBlock": 2558000,
+      "last": true
+    }
+  ]
+}
