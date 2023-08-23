@@ -8,10 +8,3 @@ export const GammaShortStrategyAddress: Address = Address.fromString(
 export const GammaShortStrategyContract = GammaShortStrategy.bind(
   GammaShortStrategyAddress
 )
-
-
-export const StrategyStartBlocks =[
-{{#strategies}}
-{{startBlock}}{{^last}}, {{/last}}
-{{/strategies}}
-]

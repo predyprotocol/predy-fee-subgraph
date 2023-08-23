@@ -51,47 +51,5 @@
       "address": "0x3d18c836be1674e8ecc6906224c3e871a1b3a13f"
     }
   ],
-  "startBlock": 107855780,
-  "strategies": [
-    {
-      "startBlock": 0,
-      "last": false
-    },
-    {
-      "startBlock": 107877200,
-      "last": false
-    },
-    {
-      "startBlock": 107877200,
-      "last": false
-    },
-    {
-      "startBlock": 107877200,
-      "last": false
-    },
-    {
-      "startBlock": 107877200,
-      "last": false
-    },
-    {
-      "startBlock": 107877200,
-      "last": false
-    },
-    {
-      "startBlock": 111762200,
-      "last": false
-    },
-    {
-      "startBlock": 107877200,
-      "last": false
-    },
-    {
-      "startBlock": 108421850,
-      "last": false
-    },
-    {
-      "startBlock": 111260000,
-      "last": true
-    }
-  ]
+  "startBlock": 107855780
 }
