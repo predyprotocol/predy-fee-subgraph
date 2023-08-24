@@ -3,11 +3,11 @@ schema:
   file: ./schema.graphql
 dataSources:
   - kind: ethereum/contract
-    name: Block
+    name: StrategyPrice
     network: {{network}}
     source:
-      address: "{{GammaShortStrategy}}"
-      abi: GammaShortStrategy
+      address: "{{PriceOracle}}"
+      abi: AggregatorInterface
       startBlock: {{startBlock}}
     mapping:
       kind: ethereum/events
@@ -16,12 +16,15 @@ dataSources:
       entities:
         - AggregatedUniswapPriceEntity
       abis:
-        - name: UniswapV3Pool
-          file: ./abis/UniswapV3Pool.json
+        - name: AggregatorInterface
+          file: ./node_modules/@chainlink/contracts/abi/v0.6/AggregatorInterface.json
         - name: GammaShortStrategy
           file: ./abis/GammaShortStrategy.json
-      blockHandlers:
-        - handler: handleBlock
+        - name: UniswapV3Pool
+          file: ./abis/UniswapV3Pool.json
+      eventHandlers:
+        - event: AnswerUpdated(indexed int256,indexed uint256,uint256)
+          handler: handleAnswerUpdated
       file: ./src/StrategyPrice.ts
 {{#pools}}
   - kind: ethereum/contract

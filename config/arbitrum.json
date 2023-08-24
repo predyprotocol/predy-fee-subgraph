@@ -1,6 +1,7 @@
 {
   "network": "arbitrum-one",
   "GammaShortStrategy": "0x247d8E00a2714665a5231f4AB165839d943C1838",
+  "PriceOracle": "0x942d00008D658dbB40745BBEc89A93c253f9B882",
   "pools": [
     {
       "name": "ETH-USDCe-500",

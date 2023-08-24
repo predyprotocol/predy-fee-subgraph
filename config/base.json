@@ -1,6 +1,7 @@
 {
   "network": "base",
   "GammaShortStrategy": "0x27605a1b1eC1F6a964A926D43770Cb37E1f295F5",
+  "PriceOracle": "0x57d2d46Fc7ff2A7142d479F2f59e1E3F95447077",
   "pools": [
     {
       "name": "ETH-USDbC-500",
